@@ -62,10 +62,6 @@ stream.on('tweet', function (tweet) {
         let s2 = `🕵️ For a full analysis of this tweet and the disclaimer, check out https://dpclab.org/russia/troll-explorer/?text=${urlEncode(text)}`;
         sentences.push(s2);
 
-        // Sentence 3: disclaimer
-        let s3 = `ℹ️ I'm a bot and use a machine learning model.`;
-        sentences.push(s3);
-
         let finalText = sentences.join("\n\n");
 
         T.post('statuses/update', {
