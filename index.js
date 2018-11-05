@@ -21,7 +21,7 @@ stream.on('tweet', function (tweet) {
       var user_who_posted = "@" + data.user.screen_name; //User who posted the original tweet
 
       request.get("https://ru.dpccdn.net/analyze/" + encodeURIComponent(text.replace(/\//g, "")), function(err, res, body){ //Run it through the API
-        var result_str = user_who_invoked + " The Tweet (https://twitter.com/" + data.user.screen_name + "/status/" + data.id_str + ") ";
+        var result_str = user_who_invoked + " This tweet (https://twitter.com/" + data.user.screen_name + "/status/" + data.id_str + ") ";
         var master = JSON.parse(body).master;
 
         if(master > 0.5) result_str += "is significantly more troll-like than organic";
@@ -33,7 +33,6 @@ stream.on('tweet', function (tweet) {
 
         console.log(result_str);
 
-        //.bold()
         T.post('statuses/update', { //Respond to user
           status: result_str,
           in_reply_to_status_id: tweet.id_str
