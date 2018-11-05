@@ -1,0 +1,24 @@
+{
+  "name": "track-the-trolls",
+  "version": "1.0.0",
+  "description": "Novelty bot on Twitter designed to inform users whether a Tweet sounds like Russian IRA content. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DPCLab/TwitterBot.git"
+  },
+  "author": "Jeffrey Shen <jeffreyshencc@gmail.com> (http://jeffreyshen.com)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/DPCLab/TwitterBot/issues"
+  },
+  "homepage": "https://github.com/DPCLab/TwitterBot#readme",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "request": "^2.88.0",
+    "twit": "^2.2.11"
+  }
+}
